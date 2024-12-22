@@ -1,0 +1,150 @@
+// Змінні
+$primary-color: #250e0e
+$secondary-color: #3e5b3e
+$tertiary-color: #5c3a1e
+$accent-color: #9a3c25
+$highlight-color: #e19c11
+$white: white
+$font-family: Arial, sans-serif
+
+// Загальні стилі
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+body
+  font-family: $font-family
+  background-color: $tertiary-color
+  margin: 0
+  padding: 0
+
+header
+  background-color: $primary-color
+  color: $white
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px 20px
+
+  .logo
+    font-size: 24px
+    background-color: $tertiary-color
+    border: 3px solid $accent-color
+    border-radius: 10px
+    padding: 10px 20px
+
+  .white-text
+    color: $white
+
+.register-button
+  background-color: $secondary-color
+  color: $white
+  border: none
+  padding: 10px 20px
+  cursor: pointer
+  transition: all 0.3s
+
+  &:hover
+    background-color: darken($secondary-color, 10%)
+
+.intro
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 20px
+  text-align: center
+
+  .intro-text
+    font-size: 25px
+    margin-bottom: 20px
+    color: $white
+
+  .intro-image img
+    max-width: 100%
+    height: auto
+
+.features, .how-to
+  padding: 20px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  text-align: center
+
+.features
+  background-image: url("https://wowmebli.com/storage/uploaded/blog/1372c85ced13b9832cc2655d20addeba.jpg")
+  background-size: cover
+
+.features h2, .how-to h2
+  width: 100%
+  font-size: 28px
+  margin: 20px 0
+
+.block
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  text-align: center
+
+.feature, .step
+  background-color: $secondary-color
+  color: $white
+  padding: 20px
+  margin: 10px
+  box-sizing: border-box
+  flex: 1 1 calc(33.33% - 20px)
+
+.button-container
+  display: flex
+  justify-content: center
+  margin-top: 20px
+
+.how-to
+  color: $white
+
+.footer-content
+  background-color: $primary-color
+  color: $white
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 20px
+  text-align: center
+
+  .logo-footer
+    font-size: 30px
+    margin-bottom: 10px
+
+  .contact-table
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    td
+      padding: 10px
+      color: $white
+      cursor: pointer
+      transition: all 0.3s
+
+      &:hover
+        background-color: $highlight-color
+
+// Адаптивні стилі
+@media (min-width: 768px)
+  .intro
+    flex-direction: row
+    justify-content: space-between
+    text-align: left
+
+    .intro-text, .intro-image
+      flex: 1
+      margin: 10px
+
+@media (min-width: 1024px)
+  .feature, .step
+    flex: 1 1 calc(33.33% - 20px)
+
+  .footer-content
+    flex-direction: row
+    justify-content: space-between
+    text-align: left

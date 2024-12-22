@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #5c3a1e;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #250e0e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+header .logo {
+  font-size: 24px;
+  background-color: #5c3a1e;
+  border: 3px solid #9a3c25;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+header .white-text {
+  color: white;
+}
+
+.register-button {
+  background-color: #3e5b3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.register-button:hover {
+  background-color: rgb(41.3333333333, 60.6666666667, 41.3333333333);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+.intro .intro-text {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: white;
+}
+.intro .intro-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.features, .how-to {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.features {
+  background-image: url("https://wowmebli.com/storage/uploaded/blog/1372c85ced13b9832cc2655d20addeba.jpg");
+  background-size: cover;
+}
+
+.features h2, .how-to h2 {
+  width: 100%;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.feature, .step {
+  background-color: #3e5b3e;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+  flex: 1 1 calc(33.33% - 20px);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.how-to {
+  color: white;
+}
+
+.footer-content {
+  background-color: #250e0e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+.footer-content .logo-footer {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.footer-content .contact-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-content .contact-table td {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.footer-content .contact-table td:hover {
+  background-color: #e19c11;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .intro .intro-text, .intro .intro-image {
+    flex: 1;
+    margin: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .feature, .step {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
